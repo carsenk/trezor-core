@@ -25,7 +25,7 @@ def output_script_p2pkh(pubkeyhash: bytes) -> bytearray:
     s[1] = 0xA9  # OP_HASH_160
     s[2] = 0x14  # pushing 20 bytes
     s[3:23] = pubkeyhash
-    s[23] = 0x88  # OP_EQUALVERIFY
+    s[23] = 0x88  # OP_EQUALVERIFYhash
     s[24] = 0xAC  # OP_CHECKSIG
     return s
 

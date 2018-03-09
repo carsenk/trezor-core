@@ -309,6 +309,22 @@ def cosi_sign(secret_key: bytes, message: bytes, nonce: bytes, sigR: bytes, comb
     Produce signature of message using COSI cosigning scheme.
     '''
 
+# extmod/modtrezorcrypto/modtrezorcrypto-nem.h
+class Nem:
+    '''
+    NEM
+    '''
+
+    def __init__(self) -> None:
+        '''
+        Creates a hash context object.
+        '''
+
+    def validate_address(self, address, network: int) -> bool:
+        '''
+        Compute a NEM address string from the HD node.
+        '''
+
 # extmod/modtrezorcrypto/modtrezorcrypto-nist256p1.h
 def generate_secret() -> bytes:
     '''
